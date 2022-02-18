@@ -8,7 +8,7 @@ import { useUserStore } from '@/stores/user'
 // up by any useUserStore() call without having to pass it: `useUserStore(pinia)`
 setActivePinia(createPinia())
 
-let userStore = useUserStore()
+const userStore = useUserStore()
 
 describe('User Store', () => {
   beforeEach(() => {

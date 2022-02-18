@@ -9,7 +9,7 @@ const propsData = {
   isNextButtonDisabled: true
 }
 
-let wrapper: VueWrapper<any>
+let wrapper: VueWrapper<any> // eslint-disable-line
 
 jest.mock('vue-router', () => ({
   useRouter: () => ({
