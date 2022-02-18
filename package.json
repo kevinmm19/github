@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "start": "node server.js",
+    "postinstall": "if test \"$NODE_ENV\" = \"production\" ; then npm run build ; fi",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
@@ -14,7 +16,9 @@
   "dependencies": {
     "autoprefixer": "^9.8.8",
     "core-js": "^3.6.5",
+    "express": "^4.17.3",
     "postcss": "^7.0.39",
+    "serve-static": "^1.14.2",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17",
     "vue": "^3.0.0",
     "vue-class-component": "^8.0.0-0",
