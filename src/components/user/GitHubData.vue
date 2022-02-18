@@ -21,14 +21,14 @@
 
 <template>
   <div class="mt-8 mb-12">
-    <div v-if="hasGitHubData">
-      <div>
-        <img
-          :src="gitHubData.avatar_url"
-          alt="GitHub avatar"
-          class="object-contain h-96 w-full"
-        />
-      </div>
+    <template v-if="hasGitHubData">
+      <img
+        :src="gitHubData.avatar_url"
+        alt="GitHub avatar"
+        class="object-contain h-96 w-full"
+        height="240"
+        width="378"
+      />
 
       <a
         :href="gitHubData.html_url"
@@ -65,7 +65,7 @@
           {{ updatedAt }}
         </li>
       </ul>
-    </div>
+    </template>
 
     <p
       v-else
