@@ -45,49 +45,86 @@
     mode="out-in"
     appear
   >
-    <div class="form">
-      <h2>User Information</h2>
+    <div class="
+      mx-auto mt-8 p-8 max-w-2xl
+      border border-solid border-green-400 rounded-3xl shadow-2xl
+    ">
+      <h2 class="pb-6 text-green-400">User Information</h2>
 
       <Form
         :validation-schema="schema"
         v-slot="{ meta }"
+        class="text-left"
       >
         <!-- First Name -->
-        <label for="firstName">* First Name</label>
+        <div class="mt-4 mb-8">
+          <label
+            class="font-bold"
+            for="firstName"
+          >
+            * First Name
+          </label>
         
-        <Field
-          v-model.trim="firstName"
-          id="firstName"
-          name="firstName"
-          type="text"
-          autofocus
-        />
-        
-        <ErrorMessage name="firstName" />
+          <Field
+            v-model.trim="firstName"
+            class="my-4 pl-4 h-12 w-full bg-gray-600 text-white border-0"
+            id="firstName"
+            name="firstName"
+            type="text"
+            autofocus
+          />
+          
+          <ErrorMessage
+            class="text-red-400"
+            name="firstName"
+          />
+        </div>
 
         <!-- Last Name -->
-        <label for="lastName">* Last Name</label>
+        <div class="mt-4 mb-8">
+          <label
+            class="font-bold"
+            for="lastName"
+          >
+            * Last Name
+          </label>
         
-        <Field
-          v-model.trim="lastName"
-          id="lastName"
-          name="lastName"
-          type="text"
-        />
-        
-        <ErrorMessage name="lastName" />
+          <Field
+            v-model.trim="lastName"
+            class="my-4 pl-4 h-12 w-full bg-gray-600 text-white border-0"
+            id="lastName"
+            name="lastName"
+            type="text"
+          />
+          
+          <ErrorMessage
+            class="text-red-400"
+            name="lastName"
+          />
+        </div>
         
         <!-- Username -->
-        <label for="username">* Username</label>
-        
-        <Field
-          v-model.trim="username"
-          id="username"
-          name="username"
-          type="text"
-        />
-        
-        <ErrorMessage name="username" />
+        <div class="mt-4 mb-8">
+          <label
+            class="font-bold"
+            for="username"
+          >
+            * Username
+          </label>
+          
+          <Field
+            v-model.trim="username"
+            class="my-4 pl-4 h-12 w-full bg-gray-600 text-white border-0"
+            id="username"
+            name="username"
+            type="text"
+          />
+          
+          <ErrorMessage
+            class="text-red-400"
+            name="username"
+          />
+        </div>
 
         <Navigation
           :current-step="2"
@@ -97,10 +134,3 @@
     </div>
   </Transition>
 </template>
-
-<style
-  lang="scss"
-  scoped
->
-
-</style>

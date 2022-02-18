@@ -1,32 +1,43 @@
-<template>
-  <nav class="nav">
-    <router-link to="/">Home</router-link>
-  </nav>
+<script
+  setup
+  lang="ts"
+>
+  import Header from '@/components/layout/Header.vue'
+  import Footer from '@/components/layout/Footer.vue'
+</script>
 
-  <router-view />
+<template>
+  <div class="flex flex-col items-center h-screen justify-between">
+    <Header />
+
+    <main class="container">
+      <router-view />
+    </main>
+
+    <Footer />
+  </div>
 </template>
 
 <style lang="scss">
-@import './styles/_transitions.scss';
+  @import './styles/_transitions.scss';
 
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-.nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+  html {
+    box-sizing: border-box;
+    font-size: 62.5%; // ~10px
   }
-}
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    color: #fff;
+    font-size: 1.4rem;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    text-align: center;
+  }
 </style>

@@ -40,38 +40,67 @@
     mode="out-in"
     appear
   >
-    <div class="form">
-      <h2>Last Step</h2>
+    <div class="
+      mx-auto mt-8 p-8 max-w-2xl
+      border border-solid border-green-400 rounded-3xl shadow-2xl
+    ">
+      <h2 class="pb-6 text-green-400">Last Step</h2>
 
       <Form
         :validation-schema="schema"
         v-slot="{ meta }"
+        class="text-left"
       >
         <!-- Email -->
-        <label for="email">* Email</label>
+        <div class="mt-4 mb-8">
+          <label
+            class="font-bold"
+            for="email"
+          >
+            * Email
+          </label>
         
-        <Field
-          v-model="email"
-          id="email"
-          name="email"
-          type="email"
-          autofocus
-        />
-        
-        <ErrorMessage name="email" />
-        
+          <Field
+            v-model="email"
+            class="my-4 pl-4 h-12 w-full bg-gray-600 text-white border-0"
+            id="email"
+            name="email"
+            type="email"
+            autofocus
+          />
+          
+          <ErrorMessage
+            class="text-red-400"
+            name="email"
+          />
+        </div>
+
         <!-- Agree with terms and services -->
-        <label for="hasAgreeToTerms">* I agree with terms and services</label>
-        
-        <Field
-          v-model="hasAgreeToTerms"
-          :value="true"
-          id="hasAgreeToTerms"
-          name="hasAgreeToTerms"
-          type="checkbox"
-        />
-        
-        <ErrorMessage name="hasAgreeToTerms" />
+        <div class="mt-4 mb-8">
+          <div class="flex justify-between">
+            <label
+              class="font-bold"
+              for="hasAgreeToTerms"
+            >
+              * I agree with terms and services
+            </label>
+          
+            <Field
+              v-model="hasAgreeToTerms"
+              :value="true"
+              class="ml-4 h-7 w-7"
+              id="hasAgreeToTerms"
+              name="hasAgreeToTerms"
+              type="checkbox"
+            />
+          </div>
+          
+          <ErrorMessage
+            as="p"
+            class="mt-4 text-red-400"
+            name="hasAgreeToTerms"
+          />
+        </div>
 
         <Navigation
           :current-step="3"
@@ -81,10 +110,3 @@
     </div>
   </Transition>
 </template>
-
-<style
-  lang="scss"
-  scoped
->
-
-</style>

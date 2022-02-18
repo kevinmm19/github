@@ -53,9 +53,13 @@
 </script>
 
 <template>
-  <div class="navigation">
+  <div class="flex items-center justify-between">
     <button
       v-if="!isFirstStep"
+      class="
+        px-8 py-4 font-bold text-white bg-green-900 hover:bg-green-600
+        border border-solid border-green-400 rounded-3xl cursor-pointer
+      "
       qa-ref="back-button"
       type="button"
       @click="navigateBack"
@@ -63,12 +67,15 @@
       Back
     </button>
     
-    <span>
-      {{ props.currentStep }} / 3
-    </span>
+    <span class="font-bold text-green-400">{{ props.currentStep }} / 3</span>
     
     <button
+      :class="{ 'opacity-50 cursor-not-allowed': props.isNextButtonDisabled }"
       :disabled="props.isNextButtonDisabled"
+      class="
+        px-8 py-4 font-bold text-white bg-green-900 hover:bg-green-600
+        border border-solid border-green-400 rounded-3xl cursor-pointer
+      "
       qa-ref="next-button"
       type="button"
       @click="navigateNext"
@@ -77,10 +84,3 @@
     </button>
   </div>
 </template>
-
-<style
-  scoped
-  lang="scss"
->
-
-</style>

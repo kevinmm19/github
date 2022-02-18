@@ -3,18 +3,9 @@
   lang="ts"
 >
   import { useUserStore } from '@/stores/user'
-  import { useRouter } from 'vue-router'
   import GitHubData from './GitHubData.vue'
 
   const userStore = useUserStore()
-
-  /* Router Navigation */
-
-  const router = useRouter()
-
-  const navigateHome = () => {
-    router.push('/')
-  }
 </script>
 
 <template>
@@ -23,15 +14,28 @@
     mode="out-in"
     appear
   >
-    <div class="userData">
-      <h2>Welcome</h2>
+    <div class="
+      mx-auto mt-8 p-8 max-w-2xl
+      border border-solid border-green-400 rounded-3xl shadow-2xl
+    ">
+      <h2 class="pb-8 text-green-400">Hello {{ userStore.firstName }}!</h2>
 
-      <div class="user-info">
-        <p>Name: {{ userStore.firstName }} {{ userStore.lastName }}</p>
+      <div>
+        <p>
+          <span class="font-bold">Name:</span>
+          {{ userStore.firstName }}
+          {{ userStore.lastName }}
+        </p>
         
-        <p>Email: {{ userStore.email }}</p>
-        
-        <p>Username: {{ userStore.username }}</p>
+        <p>
+          <span class="font-bold">Username:</span>
+          {{ userStore.username }}
+        </p>
+
+        <p>
+          <span class="font-bold">Email:</span>
+          {{ userStore.email }}
+        </p>
       </div>
 
       <Suspense>
@@ -50,20 +54,12 @@
         </template>
       </Suspense>
 
-      <button
-        qa-ref="home-button"
-        type="button"
-        @click="navigateHome"
+      <router-link
+        class="font-bold text-green-400"
+        to="/"
       >
-        Home
-      </button>
+        Take Me Home
+      </router-link>
     </div>
   </Transition>
 </template>
-
-<style
-  lang="scss"
-  scoped
->
-
-</style>
