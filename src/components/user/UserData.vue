@@ -20,23 +20,21 @@
     ">
       <h2 class="pb-8 text-green-400">Hello {{ userStore.firstName }}!</h2>
 
-      <div>
-        <p>
-          <span class="font-bold">Name:</span>
-          {{ userStore.firstName }}
-          {{ userStore.lastName }}
-        </p>
-        
-        <p>
-          <span class="font-bold">Username:</span>
-          {{ userStore.username }}
-        </p>
+      <p>
+        <span class="font-bold">Name:</span>
+        {{ userStore.firstName }}
+        {{ userStore.lastName }}
+      </p>
+      
+      <p>
+        <span class="font-bold">Username:</span>
+        {{ userStore.username }}
+      </p>
 
-        <p>
-          <span class="font-bold">Email:</span>
-          {{ userStore.email }}
-        </p>
-      </div>
+      <p>
+        <span class="font-bold">Email:</span>
+        {{ userStore.email }}
+      </p>
 
       <Suspense>
         <template #default>
@@ -58,6 +56,7 @@
 
       <router-link
         class="font-bold text-green-400"
+        qa-ref="take-me-home"
         to="/"
       >
         Take Me Home

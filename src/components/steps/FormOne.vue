@@ -70,6 +70,7 @@
             class="my-4 pl-4 h-12 w-full bg-gray-600 text-white border-0"
             id="firstName"
             name="firstName"
+            qa-ref="form-one-first-name"
             type="text"
             autofocus
           />
@@ -77,6 +78,7 @@
           <ErrorMessage
             class="text-red-400"
             name="firstName"
+            qa-ref="form-one-first-name-error"
           />
         </div>
 
@@ -94,12 +96,14 @@
             class="my-4 pl-4 h-12 w-full bg-gray-600 text-white border-0"
             id="lastName"
             name="lastName"
+            qa-ref="form-one-last-name"
             type="text"
           />
           
           <ErrorMessage
             class="text-red-400"
             name="lastName"
+            qa-ref="form-one-last-name-error"
           />
         </div>
         
@@ -117,12 +121,14 @@
             class="my-4 pl-4 h-12 w-full bg-gray-600 text-white border-0"
             id="username"
             name="username"
+            qa-ref="form-one-username"
             type="text"
           />
           
           <ErrorMessage
             class="text-red-400"
             name="username"
+            qa-ref="form-one-username-error"
           />
         </div>
 

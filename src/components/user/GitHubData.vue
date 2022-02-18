@@ -70,6 +70,7 @@
     <p
       v-else
       class="font-bold text-green-400"
+      qa-ref="not-found-username"
     >
       Username not found in GitHub.
     </p>

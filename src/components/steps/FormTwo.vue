@@ -29,7 +29,7 @@
   })
 
   const schema = object({
-    email: string().required().email().label('Email'),
+    email: string().required().email('Please provide a valid email').label('Email'),
     hasAgreeToTerms: bool().required('You must agree with terms and services')
   })
 </script>
@@ -65,6 +65,7 @@
             class="my-4 pl-4 h-12 w-full bg-gray-600 text-white border-0"
             id="email"
             name="email"
+            qa-ref="form-two-email"
             type="email"
             autofocus
           />
@@ -72,6 +73,7 @@
           <ErrorMessage
             class="text-red-400"
             name="email"
+            qa-ref="form-two-email-error"
           />
         </div>
 
@@ -91,6 +93,7 @@
               class="ml-4 h-7 w-7"
               id="hasAgreeToTerms"
               name="hasAgreeToTerms"
+              qa-ref="form-two-agree-to-terms"
               type="checkbox"
             />
           </div>
@@ -99,6 +102,7 @@
             as="p"
             class="mt-4 text-red-400"
             name="hasAgreeToTerms"
+            qa-ref="form-two-agree-to-terms-error"
           />
         </div>
 

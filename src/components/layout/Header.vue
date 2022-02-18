@@ -6,6 +6,7 @@
   ">
     <router-link
       class="font-bold text-3xl text-white no-underline"
+      qa-ref="header-logo"
       to="/"
     >
       GitHub Buddy

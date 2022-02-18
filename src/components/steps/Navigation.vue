@@ -63,12 +63,17 @@
       qa-ref="back-button"
       type="button"
       @click="navigateBack"
+    ><!-- no whitespace
+    -->Back<!-- no whitespace
+    --></button>
+    
+    <span
+      class="font-bold text-green-400"
+      qa-ref="navigation-steps"
     >
-      Back
-    </button>
-    
-    <span class="font-bold text-green-400">{{ props.currentStep }} / 3</span>
-    
+      {{ props.currentStep }} / 3<!-- no whitespace
+    --></span>
+
     <button
       :class="{ 'opacity-50 cursor-not-allowed': props.isNextButtonDisabled }"
       :disabled="props.isNextButtonDisabled"
