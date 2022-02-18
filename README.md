@@ -39,11 +39,6 @@ npm run watch:unit
 npm run e2e
 ```
 
-### Run E2E tests on watch mode
-```
-npm run watch:e2e
-```
-
 ## Tech Stack
 
 * Vue 3
