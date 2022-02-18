@@ -2,6 +2,8 @@
 
 Multi step form that guides the user through checkout process and collects data using GitHub's API.
 
+URL: https://github-buddy.herokuapp.com/
+
 ## Project setup
 ```
 npm install
@@ -54,6 +56,7 @@ npm run watch:e2e
 * SCSS
 * Semantic HTML
 * Vee-validate & Yup
+* Axios
 * Webpack
 
 ## Description
@@ -69,7 +72,7 @@ Pinia is now the recommended library for state management in Vue 3 since it feat
 
 Vue Router makes it easy to go back and forth with the multi step form by using the browser's back and next buttons.
 
-GitHub API consumption is handled through a service: github.service.ts.
+GitHub API consumption is handled through a service with the usage of Axios: github.service.ts.
 
 Vee-validate & Yup libraries allow to validate every field of the forms and provide clear errors to the user. Every step is correctly validated before the Next/Finish button is enabled.
 
