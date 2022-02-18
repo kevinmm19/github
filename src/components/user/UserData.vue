@@ -50,7 +50,9 @@
         </template>
 
         <template #fallback>
-          <p>Loading GitHub data...</p>
+          <p class="font-bold text-green-400">
+            Loading GitHub data...
+          </p>
         </template>
       </Suspense>
 
